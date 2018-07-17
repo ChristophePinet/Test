@@ -27,6 +27,8 @@ function setup() {
 
 
     windowResized()
+
+    positionbutton()
 } 
 
 
@@ -53,6 +55,8 @@ hauteur = windowHeight
 //canvas.size(largeur,hauteur)
 resizeCanvas(windowWidth, windowHeight);
 camera.size(largeur, hauteur)
+positionbutton()
+
  }
 
 
