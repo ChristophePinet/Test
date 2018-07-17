@@ -14,7 +14,7 @@ seuilSlider = createSlider(0,255,seuil) // Creer un slider
   pixelDensity(1) // Densité du pixel
   button = createButton('smile')
   button.mousePressed(comptearebours)
-  button.position(353,900)
+  button.position(largeur/2, 0)
   textSize(32)
   button2 = createButton('hide')
   button2.mousePressed(hideshow)
