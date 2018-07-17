@@ -9,26 +9,36 @@ var character =''+secondesCR
   
  
  function setupbutton() { 
+ 
 seuilSlider = createSlider(0,255,seuil) // Creer un slider 
   seuilSlider.position(100, 40) //Positionne le slider
   pixelDensity(1) // Densité du pixel
   button = createButton('smile')
   button.mousePressed(comptearebours)
-  button.position(353,900)
-  textSize(32)
+  button.position(largeur/4 ,0)
+  button.size(100,50)
+
   button2 = createButton('hide')
   button2.mousePressed(hideshow)
-  button2.position(0,900)
-  textSize(32)
+  button2.position(0,300)
+  textSize(100)
+  button2.size(100,50)
+
   button1 = createButton('next')
   button1.mousePressed(suivant)
-  button1.position(300,900)
+  button1.position(largeur/2,hauteur)
+  button1.size(100,50)
+  textSize(100)
+
   button3 = createButton('Grandecran')
   button3.mousePressed(grandecran)
-  button3.position(200, 200)
+  button3.position(0, 200)
+  button3.size(100,50)
   textSize(32)
+  
   button4 = createButton('SauveColor')
-  button4.position(25, 600);
+  button4.position(0, 250);
+  button4.size(100,50)
   button4.mousePressed(sauveCouleur);
   textSize(32)
 
