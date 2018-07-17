@@ -25,10 +25,10 @@ seuilSlider = createSlider(0,255,seuil) // Creer un slider
   button1.position(300,900)
   button3 = createButton('Grandecran')
   button3.mousePressed(grandecran)
-  button3.position(200, 200)
+  button3.position(0, 200)
   textSize(32)
   button4 = createButton('SauveColor')
-  button4.position(25, 600);
+  button4.position(0, 600);
   button4.mousePressed(sauveCouleur);
   textSize(32)
 
