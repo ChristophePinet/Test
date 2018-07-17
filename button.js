@@ -10,7 +10,7 @@ var character =''+secondesCR
  
  function setupbutton() { 
 seuilSlider = createSlider(0,255,seuil) // Creer un slider 
-  seuilSlider.position(20, 40) //Positionne le slider
+  seuilSlider.position(100, 40) //Positionne le slider
   pixelDensity(1) // Densité du pixel
   button = createButton('smile')
   button.mousePressed(comptearebours)
