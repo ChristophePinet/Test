@@ -1,7 +1,7 @@
 var camera; //variable qui définit la webcam
 var canvas; //l'endroit où on peut dessiner
-var largeur = 1980 //définit la largeur du canvas / image
-var hauteur= 980 //définit la hauteur du canvas / image
+var largeur = 1280 //définit la largeur du canvas / image
+var hauteur= 760 //définit la hauteur du canvas / image
 var Imagedefond // Définit l'image /vidéo du fond 
 var seuil = parseFloat(localStorage.getItem("ValeurSlider")) // Quand distance couleurfond est assez proche, on change l'image
 var couleurfond = [parseFloat(localStorage.getItem("couleurfondR")),parseFloat(localStorage.getItem("couleurfondG")),parseFloat(localStorage.getItem("couleurfondB"))]; // Contrôle couleur supprimée
