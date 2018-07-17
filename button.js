@@ -6,7 +6,7 @@ var button1
 var secondesCR=5
 var character =''+secondesCR
 var textsize = '2rem'
-  
+var cote = largeur/20
  
  function setupbutton() { 
  
@@ -14,47 +14,47 @@ seuilSlider = createSlider(0,255,seuil) // Creer un slider
   seuilSlider.position(100, 40) //Positionne le slider
   pixelDensity(1) // Densité du pixel
 
-  button = createButton('smile')
-  button.mousePressed(comptearebours)
+  button = createImg('Photo.png', 'smile')
+  button.mouseClicked(comptearebours)
   button.style('font-size', textsize)
 
-  button2 = createButton('hide')
-  button2.mousePressed(hideshow)
+  button2 = createImg('Ninja.png', 'hide')
+  button2.mouseClicked(hideshow)
   button2.style('font-size', textsize)
   
-  button1 = createButton('next')
-  button1.mousePressed(suivant)
+  button1 = createImg('Flèche.png','next')
+  button1.mouseClicked(suivant)
   button1.style('font-size', textsize)
 
-  button3 = createButton('Grandecran')
-  button3.mousePressed(grandecran)
-  button3.style('font-size', textsize)
+  //button3 = createImg('','Grandecran')
+  //button3.mouseClicked(grandecran)
+  //button3.style('font-size', textsize)
 
-  button4 = createButton('SauveColor')
-  button4.mousePressed(sauveCouleur);
-  button4.style('font-size', textsize)
+  //button4 = createImg('SauveColor')
+  //button4.mouseClicked(sauveCouleur);
+  //button4.style('font-size', textsize)
 
  }
 
  function positionbutton () {
 
-  button.size(largeur/5,50)
-  button.position(largeur/2 ,0)
+  button.size(cote,cote)
+  button.position(largeur/2 ,hauteur - cote)
   
 
-  button1.size(largeur/5,50)
-  button1.position(largeur - (largeur / 5) ,hauteur/2+50)
+  button1.size(cote,cote)
+  button1.position(largeur - (largeur / 10) ,hauteur/2)
   
 
-  button2.size(largeur/5,50)
-  button2.position(0,hauteur/2 + 100)
+  button2.size(cote,cote)
+  button2.position(0,hauteur - cote)
    
-  button3.size(largeur/5,50)
-  button3.position(0, hauteur/2)
+  //button3.size(largeur/5,50)
+  //button3.position(0, hauteur/2)
   
 
-  button4.size(largeur/5,50)
-  button4.position(0, hauteur/2 + 50);
+ // button4.size(largeur/5,50)
+  //button4.position(0, hauteur/2 + 50);
   
 
  }
@@ -77,8 +77,8 @@ function hideshow(){
      button.hide()
      button1.hide()
      seuilSlider.hide()
-     button3.hide()
-     button4.hide()
+    // button3.hide()
+   //  button4.hide()
      buttonhide=false
    
     
@@ -86,8 +86,8 @@ function hideshow(){
   else{ 
 button.show()
 button1.show()
-button3.show()
-button4.show()
+//button3.show()
+//button4.show()
 seuilSlider.show()
 buttonhide=true
   }   
@@ -95,7 +95,7 @@ buttonhide=true
 
 
 function grandecran() {
-if (button3.mousePressed) {
+if (button3.mouseClicked) {
     var fs = fullscreen();
     fullscreen(!fs);
   }

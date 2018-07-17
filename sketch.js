@@ -9,7 +9,7 @@ var value = 0
 var secondesCR=5
 var listimage=["Medias/a.jpg","Medias/b.jpg","Medias/c.jpg","Medias/d.jpg","Medias/e.png"]
 var positionlist=0
-
+var resolution = 1/2
 
 function setup() { 
   canvas = createCanvas(); // Creer une zone pour dessiner
@@ -52,9 +52,11 @@ function draw() { // Dessine chaque image
 function windowResized(){
 largeur = windowWidth
 hauteur = windowHeight
-//canvas.size(largeur,hauteur)
-resizeCanvas(windowWidth, windowHeight);
-camera.size(largeur, hauteur)
+canvas.size(largeur* resolution,hauteur* resolution)
+resizeCanvas(windowWidth /2, windowHeight /2);
+canvas.canvas.style.width =  windowWidth+"px"
+canvas.canvas.style.height =  windowHeight+"px"
+camera.size(largeur* resolution, hauteur* resolution)
 positionbutton()
 
  }
